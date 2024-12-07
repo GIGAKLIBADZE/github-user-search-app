@@ -15,8 +15,8 @@ export default {
       boxShadow: {
         custom: "0 16px 30px -10px rgba(70, 96, 187, 0.2)"
       },
-      filter: {
-        back: "invert(39%) sepia(24%) saturate(922%) hue-rotate(177deg) brightness(95%) contrast(90%)"
+      colors: {
+        hoverSvg: '#697c9a', 
       }
     },
   },

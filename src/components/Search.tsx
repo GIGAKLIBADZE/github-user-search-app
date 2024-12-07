@@ -6,8 +6,7 @@ const Search: React.FC<{
   user: string | Information;
   handleUserInput: React.ChangeEventHandler<HTMLInputElement>;
   githubData: (userName: string | Information) => Promise<any>;
-  data: Information | null | undefined;
-}> = ({ theme, user, handleUserInput, githubData, data, error }) => {
+}> = ({ theme, user, handleUserInput, githubData, error }) => {
   return (
     <div
       className={`${
@@ -26,7 +25,7 @@ const Search: React.FC<{
         name="user"
         className={`${
           theme ? "bg-[#fefefe] text-[#4b6a9b]" : "bg-[#1e2a47] text-[#ffffff]"
-        } w-full ml-[9px] text-[13px] font-normal leading-[1.92] tracking-normal text-left  tablet:text-[18px] tablet:leading-[1.39] tablet:ml-[24px] desktop:w-[60%]`}
+        } focus:outline-none w-full ml-[9px] text-[13px] font-normal leading-[1.92] tracking-normal text-left  tablet:text-[18px] tablet:leading-[1.39] tablet:ml-[24px] desktop:w-[60%]`}
       />
       {!error ? null : (
         <p className="w-[100%] tablet:w-[35%] desktop:w-[17%] text-[12px] ml-[8px] font-bold leading-normal text-left text-[#f74646] right-[320px] desktop:text-[15px]">
@@ -37,7 +36,7 @@ const Search: React.FC<{
         onClick={() => {
           githubData(user);
         }}
-        className={`${data !== undefined ? "desktop:ml-[110px]" : ""} ${
+        className={`${error ? "desktop:ml-[0px]" : "desktop:ml-[110px]"} ${
           error ? "desktop:ml-[0px]" : ""
         } hover:bg-[#60abff] ml-[7px] rounded-[10px] bg-[#0079ff] py-[12.5px] pr-[14px] pl-[18px] text-[14px] font-bold leading-normal text-center text-[#ffffff] tablet:text-[16px] tablet:pt-[12.5px] tablet:pr-[23px] tablet:pb-[13.5PX] tablet:pl-[24px] tablet:ml-[10px]`}
       >

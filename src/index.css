@@ -16,6 +16,24 @@
   }
 }
 
+.group.light svg path {
+  fill: #697c9a; 
+}
+
+.group.light:hover svg path {
+  fill: #222731; 
+}
+
+.group.dark svg path {
+  fill: #ffffff; 
+}
+
+.group.dark:hover svg path {
+  fill: #909399;
+}
+
+
+
 body {
   /* width: 100vw;
   min-height: 100vh; */
