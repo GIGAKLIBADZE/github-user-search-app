@@ -84,7 +84,6 @@ function App() {
           user={user}
           handleUserInput={handleUserInput}
           githubData={githubData}
-          data={data}
           error={error}
         />
         <User theme={theme} user={data} />

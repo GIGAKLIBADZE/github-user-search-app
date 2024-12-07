@@ -16,18 +16,21 @@ const Header: React.FC<{
           group hover:text-[#222731] 
           flex gap-[16px] cursor-pointer ${theme ? "light" : "dark"}
         `}
-        onClick={() =>
+        onClick={() => {
           setTheme((prevTheme) => {
-            document.querySelector("body") &&
-              document &&
-              (prevTheme
-                ? (document.querySelector("body").style.backgroundColor =
-                    "#141d2f")
-                : (document.querySelector("body").style.backgroundColor =
-                    "#ffffff"));
-            return !prevTheme;
-          })
-        }
+            const bodyElement = document.querySelector(
+              "body"
+            ) as HTMLElement | null;
+
+            if (bodyElement) {
+              bodyElement.style.backgroundColor = prevTheme
+                ? "#141d2f"
+                : "#ffffff";
+            }
+
+            return !prevTheme; // Toggle the theme
+          });
+        }}
       >
         <p
           className={`${
