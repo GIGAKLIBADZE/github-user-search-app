@@ -25,7 +25,7 @@ const Header: React.FC<{
             if (bodyElement) {
               bodyElement.style.backgroundColor = prevTheme
                 ? "#141d2f"
-                : "#ffffff";
+                : "#f6f8ff";
             }
 
             return !prevTheme; // Toggle the theme

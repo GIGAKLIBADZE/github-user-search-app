@@ -17,26 +17,24 @@
 }
 
 .group.light svg path {
-  fill: #697c9a; 
+  fill: #697c9a;
 }
 
 .group.light:hover svg path {
-  fill: #222731; 
+  fill: #222731;
 }
 
 .group.dark svg path {
-  fill: #ffffff; 
+  fill: #ffffff;
 }
 
 .group.dark:hover svg path {
   fill: #909399;
 }
 
-
-
 body {
-  /* width: 100vw;
-  min-height: 100vh; */
+  width: 100vw;
+  min-height: 100vh;
   padding: 31px 24px 79px;
   background-color: #f6f8ff;
   display: flex;
